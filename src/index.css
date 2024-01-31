@@ -1,0 +1,146 @@
+:root {
+  --SrartColor: #672280;
+  --EndColor:#A626D3;
+  --FontColor:#374151;
+  --MainColor:#FFFFFF;
+  --Border:#D1D5DB;
+}
+body{
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+h1,h2,h3,h4,h5{
+  margin: 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Start  Media queries */
+/* Small Screens */
+@media (max-width: 767px) {
+  .header{
+    padding: 5px;
+    font-size: 10px;
+  }
+  main{
+    height: 100%
+  }
+  .meme form button{
+    font-size: 1rem;
+    padding:10px 0px;
+  }
+  main img{
+    max-width: 100%;
+  }
+}
+/* End Media queries */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  height: calc(100vh - 52px);
+}
+
+/* End of Global Rules */
+/* Start Styling Header */
+
+.header {
+  background: linear-gradient(90deg, var(--SrartColor) , var(--EndColor));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--MainColor);
+}
+.header .first-part{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header .first-part img{
+  height: 35px;
+}
+/* Ending Header Section */
+/* Start Styling Meme Section */
+main{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 50px;
+}
+.meme{
+  color: var(--FontColor);
+  font-weight: bold;
+}
+.meme form{
+  margin-top: 50px;
+  display: grid;
+  grid-template: auto auto/ minmax(110px,500px) minmax(110px ,500px);
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.one input , .two input{
+  height: 35px;
+  width: 100%;
+  border: none;
+  border: 1px solid var(--Border);
+  border-radius: 5px;
+  text-indent: 2px;
+}
+.meme button{
+  background: linear-gradient(to top, var(--SrartColor), var(--EndColor));
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: var(--MainColor);
+  font-weight: bold;
+  font-size: 1.5rem;
+  grid-area: 2 / 1 / 3 / 3 ;
+  height: 40px;
+  cursor: pointer;
+}
+.image-content{
+align-self: center;
+max-height: 50%;
+position: relative;
+}
+.image-content img{
+  max-height: 100%;
+}
+.image-content p{
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+.image-content p:first-child{
+  top: 0;
+}
+.image-content p:nth-child(2){
+  bottom:0;
+}
+/* Ending Styling Meme section */
